@@ -1,4 +1,4 @@
-import { Avatar, Card } from 'antd';
+import { Card } from 'antd';
 import React, { useEffect, useState } from 'react';
 import {getAllProjectsService} from '../services/project.services'
 import { useContext } from "react";
@@ -22,7 +22,6 @@ const { Meta } = Card;
       const [fulldescription, setFullDescription] = useState('');
       const [anunciosArr, setAnunciosArr] = useState([]);
 
-      const { user } = useContext(AuthContext);
 
         const anuncios = async() => {
             try {

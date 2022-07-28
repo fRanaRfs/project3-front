@@ -4,6 +4,7 @@ import './index.css';
 import Layout from './components/Layout'
 
 
+
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import ProjectListPage from './pages/ProjectListPage';
@@ -17,7 +18,7 @@ import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
 import AnunciosComponent from './components/AnunciosComponent';
-import setAnunciosDetails from './components/DetallesAnuncio'
+import SetAnunciosDetails from './components/DetallesAnuncio'
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
 					}
 				/>
 			<Route exact path="/anuncios/details" component={AnunciosDetails} element={
-				<Layout />
+				<SetAnunciosDetails />
 				}
 				/>
 				<Route
