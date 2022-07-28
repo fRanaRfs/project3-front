@@ -32,21 +32,27 @@ function ProjectCard({ title, description, _id, image, fulldescription, date }) 
 				<h3>{title}</h3>
 			</Link>
 			
-			<p>id: {_id}</p>
 			
 			<p style={{ maxWidth: '400px' }}>{description} </p>
 
 			<div>
 				<img src={image} alt="img" className="imagenes" />
 			</div>
+			<br></br>
+			<br></br>
 
 			<div>
-			<h4>Descripción detallada: {fulldescription}</h4>
+			<h4>Descripción detallada:</h4>
+			 <p>{fulldescription}</p>
 
 			</div>
+			<br></br>
+			<br></br>
 			<div>
 				<h4>Disponibilidad: {date}</h4>
 			</div>
+			<br></br>
+			<br></br>
 			
 			
             

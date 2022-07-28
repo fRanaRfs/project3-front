@@ -7,6 +7,17 @@ import giticon from '../images/githubicon.png'
 import linkicon from '../images/linkeicon.png'
 
 
+// .detailsdescription {
+//   padding: 10px 250px;
+//   font-size: 20px;
+ 
+// }
+
+// .detailstitle {
+//   padding-top: 40px;
+// }
+
+
 const { Footer, Sider, Content } = Layout;
 
 const setLayout = () => (
@@ -14,9 +25,16 @@ const setLayout = () => (
 <Layout>
       <Sider width={800}><Carousel/></Sider>
       <Layout>
-        <Content><h1>Bienvenid@ a Chollociones</h1>
-        <h3>La mision de este portal, es recopilar "chollos" y ofertas de todo el territorio nacional para dejar tus vacaciones listas y a un precio espectacular!</h3>
-        <p>También podrás registrar tus propios anuncios para que la gente contacte contigo y pueda disfrutar de tu inmueble segun disponibilidad y precio!</p>
+        <Content>
+          <h1 className="parrafoLanding">Intercambia tu casa a corto plazo</h1>
+          <br></br>
+          <br></br>
+          <br></br>
+          <button className='buttonLandingPage'><a href="/signup">Descubre las oportunidades</a></button>
+          <br></br>
+          <br></br>
+          <br></br>
+          <button><a href="/login">Entra</a></button>
         </Content>
         <Footer className='layoutfooter'>
         <a href="https://github.com/fRanaRfs/" target="_blank" rel="noreferrer">

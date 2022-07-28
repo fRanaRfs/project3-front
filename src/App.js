@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
 import Layout from './components/Layout'
+import "@fontsource/manrope";
 
 
 
@@ -33,6 +34,9 @@ function App() {
 					<Layout />
 					}
 				/>
+
+			
+
 			<Route exact path="/anuncios/details" component={AnunciosDetails} element={
 				<SetAnunciosDetails />
 				}

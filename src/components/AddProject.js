@@ -33,7 +33,7 @@ function AddProject(props) {
 			<input type="text" name="title" placeholder='Título del anuncio' value={title} onChange={(e) => setTitle(e.target.value)} className="form-control mt-1"/>
             <label>Descripción:</label>
             <textarea
-					placeholder='Descripción breve sobre el inmueble'
+					placeholder='Descripción breve sobre el inmueble. Ej: Bonita casa a las afueras de Reus'
                     type="text"
 					className="form-control mt-1"
                     name="description"
@@ -47,7 +47,7 @@ function AddProject(props) {
           </div>
 		  <div className="form-group mt-3">
             <label>Descripción detallada:</label>
-            <textarea type="text" name="fulldescription" placeholder='Habitaciones, metros cuadrados, etc...' value={fulldescription} onChange={(e) => setFullDescription(e.target.value)} className="form-control mt-1"  />
+            <textarea type="text" name="fulldescription" placeholder='Habitaciones, metros cuadrados, piscina, etc...' value={fulldescription} onChange={(e) => setFullDescription(e.target.value)} className="form-control mt-1"  />
           </div>
 		  <div className="form-group mt-3">
             <label>Disponible desde-hasta:</label>
@@ -55,7 +55,7 @@ function AddProject(props) {
           </div>
 		  <br></br>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit">Añadir</button>
+            <button type="submit" className="btn btn-primary">Añadir</button>
           </div>
         </div>
       </form>

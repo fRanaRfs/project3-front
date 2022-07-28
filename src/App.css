@@ -63,6 +63,7 @@
 .imagenes {
   max-width: 200px;
   max-height: 200px;
+  
 }
 
 
@@ -114,4 +115,24 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: rgb(34, 34, 34);
+}
+
+.detailspage {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  text-align: justify;
+}
+
+.detailsdescription {
+  padding: 10px 250px;
+  font-size: 20px;
+ 
+}
+
+.detailstitle {
+  padding-top: 40px;
 }

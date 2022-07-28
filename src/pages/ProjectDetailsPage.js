@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getProjectDetailsService } from '../services/project.services';
-import DetallesCarousel from '../components/DetallesCarousel'
 import { Link, useParams } from 'react-router-dom';
 import AddTask from '../components/AddTask';
 import TaskCard from '../components/TaskCard';
+import DetailsDate from '../components/DetailsDate'
 
 import { Layout } from 'antd';
 import React from 'react';
@@ -42,14 +42,31 @@ function ProjectDetailsPage(props) {
 					
 					
 					<Layout>
-      <Sider width={800}><img src={project.image} alt="img" width={800}/></Sider>
+      <Sider width={800}><img src={project.image} alt="img" width={900} height={750}/></Sider>
       <Content>
+
+		<div className='detailspage'>
+		<div className='detailstitle'>
+		<h1>{project.title}</h1>
+		</div>
 		
-		<h1>Titulo del anuncio: {project.title}</h1>
-	    <p>Descripción: {project.description}</p>
-		<p>Descripción detallada del inmueble: {project.fulldescription}</p>
-		<p>Disponibilidad: {project.date}</p>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+	    <h4>{project.description}</h4>
+		<br></br>
 		
+		<div className='detailsdescription'>
+		<p>{project.fulldescription}</p>
+		</div>
+		<br></br>
+		
+		<DetailsDate date={project.date}/>
+		</div>
+		<br></br>
+				
+		<button>Reservar</button>
 	  
 	  </Content>
       
