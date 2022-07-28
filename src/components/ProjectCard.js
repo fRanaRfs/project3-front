@@ -5,7 +5,7 @@ import {useState} from 'react'
 
 
 // We are deconstructing props object directly in the parentheses of the function
-function ProjectCard({ title, description, _id, image, fulldescription }) {
+function ProjectCard({ title, description, _id, image, fulldescription, date }) {
 	const [ isDeleted, setIsDeleted ] = useState(false);
 	const idProject= _id;
 
@@ -43,6 +43,9 @@ function ProjectCard({ title, description, _id, image, fulldescription }) {
 			<div>
 			<h4>Descripción detallada: {fulldescription}</h4>
 
+			</div>
+			<div>
+				<h4>Disponibilidad: {date}</h4>
 			</div>
 			
 			

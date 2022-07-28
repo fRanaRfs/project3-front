@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import { addNewTaskService } from '../services/tasks.services';
+import { Layout} from 'antd';
+import React from 'react';
+import '../App.css'
+import '../index.css';
+import DetallesCarousel from './DetallesCarousel'
+
+const { Content, Sider } = Layout;
 
 
 function AddTask(props) {
@@ -30,7 +37,15 @@ function AddTask(props) {
 	};
 
 	return (
-		<div className="AddTask">
+		<div>
+	
+		</div>
+	);
+}
+
+export default AddTask;
+
+/* <div className="AddTask">
 			<h3>Añade una tarea</h3>
 
 			<form onSubmit={handleSubmit}>
@@ -48,8 +63,4 @@ function AddTask(props) {
 				<button type="submit">Añadir tarea</button>
 				{isLoading && <Spinner animation="grow" size="sm" />}
 			</form>
-		</div>
-	);
-}
-
-export default AddTask;
+		</div> */

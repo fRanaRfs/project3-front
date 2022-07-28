@@ -1,9 +1,9 @@
 import { Card } from 'antd';
 import React, { useEffect, useState } from 'react';
 import {getAllProjectsService} from '../services/project.services'
-import { useContext } from "react";
-import { AuthContext } from "./../context/auth.context";
+import {Link} from 'react-router-dom'
 const { Meta } = Card;
+
 
 
 
@@ -20,7 +20,9 @@ const { Meta } = Card;
 	    const [ description, setDescription ] = useState('');
 	    const [ image, setImage ] = useState();
       const [fulldescription, setFullDescription] = useState('');
+      const [fecha, setFecha] = useState('');
       const [anunciosArr, setAnunciosArr] = useState([]);
+      
 
 
         const anuncios = async() => {
@@ -31,6 +33,7 @@ const { Meta } = Card;
                 setDescription(response.data.description)
                 setImage(response.data.image)
                 setFullDescription(response.data.fulldescription)
+                setFecha(response.data.fecha)
             } catch (err) {
                 console.log(err);
             }
@@ -55,9 +58,7 @@ const { Meta } = Card;
         >
           <Meta title={anuncios.title} description={anuncios.description} />
           <br></br>
-          <form action="/anuncios/details">
-    <input type="submit" value="Mas información" />
-        </form>
+          <Link to={`/projects/${anuncios._id}`}>Mas información</Link>
         </Card>
 
         

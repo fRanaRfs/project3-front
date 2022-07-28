@@ -10,7 +10,7 @@ const getProjectDetailsService = (id) => {
 };
 
 const addNewProjectService = (newProject) => {
-	return service.post(`${URL}/`, newProject);
+	return service.post(`${URL}`, newProject);
 };
 
 const deleteProjectService = (id) => {
@@ -24,6 +24,8 @@ const updateProjectService = (id) => {
 const getAllAnuncios = () => {
 	return service.get(`${URL}/anuncios`) 
 }
+
+
 
 
 

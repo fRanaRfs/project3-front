@@ -12,7 +12,7 @@ const setAnunciosDetails = () => (
 
 <Layout>
       <Sider width={800}><DetallesCarousel /></Sider>
-      <Content>Content</Content>
+      <Content></Content>
       
     </Layout>
   

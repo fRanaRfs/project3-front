@@ -30,27 +30,51 @@ function SignupPage(props) {
   };
 
 	return (
-		<div className="SignupPage">
-			<h1>Sign Up</h1>
-
-			<form onSubmit={handleSignupSubmit}>
-				<label>Email:</label>
-				<input type="text" name="email" value={email} onChange={handleEmail} />
-
-				<label>Password:</label>
-				<input type="password" name="password" value={password} onChange={handlePassword} />
-
-				<label>Name:</label>
-				<input type="text" name="name" value={name} onChange={handleName} />
-
-				<button type="submit">Sign Up</button>
-			</form>
-
-			{errorMessage && <p className="error-message">{errorMessage}</p>}
-
-			<p>Already have account?</p>
-			<Link to={'/login'}> Login</Link>
-		</div>
+		<div className="Auth-form-container">
+      <form className="Auth-form" onSubmit={handleSignupSubmit}>
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Registrarse</h3>
+          <div className="form-group mt-3">
+            <label>Nombre completo</label>
+            <input
+              type="text"
+              className="form-control mt-1"
+              placeholder="e.g Jane Doe"
+			  value={name} 
+			  onChange={handleName}
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Dirección de email</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Email Address"
+			  value={email} 
+			  onChange={handleEmail}
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Contraseña</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Password"
+			  value={password} 
+			  onChange={handlePassword}
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">
+              Entrar
+            </button>
+          </div>
+          <p className="text-center mt-2">
+            ¿Ya tienes cuenta? <Link to={'/login'}> Entrar</Link>
+          </p>
+        </div>
+      </form>
+    </div>
 	);
 }
 
