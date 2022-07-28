@@ -30,9 +30,10 @@ function AddProject(props) {
           <h3 className="Auth-form-title">Añadir anuncio</h3>
           <div className="form-group mt-3">
 		  	<label>Título:</label>
-			<input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control mt-1"/>
+			<input type="text" name="title" placeholder='Título del anuncio' value={title} onChange={(e) => setTitle(e.target.value)} className="form-control mt-1"/>
             <label>Descripción:</label>
             <textarea
+					placeholder='Descripción breve sobre el inmueble'
                     type="text"
 					className="form-control mt-1"
                     name="description"
@@ -42,15 +43,15 @@ function AddProject(props) {
           </div>
           <div className="form-group mt-3">
             <label>URL de Imagen:</label>
-            <input type="url" name="image" onChange={(e) => setImage(e.target.value)} className="form-control mt-1"  />
+            <input type="url" name="image" placeholder='Añade una imagen via URL' onChange={(e) => setImage(e.target.value)} className="form-control mt-1"  />
           </div>
 		  <div className="form-group mt-3">
             <label>Descripción detallada:</label>
-            <input type="text" name="fulldescription" value={fulldescription} onChange={(e) => setFullDescription(e.target.value)} className="form-control mt-1"  />
+            <textarea type="text" name="fulldescription" placeholder='Habitaciones, metros cuadrados, etc...' value={fulldescription} onChange={(e) => setFullDescription(e.target.value)} className="form-control mt-1"  />
           </div>
 		  <div className="form-group mt-3">
             <label>Disponible desde-hasta:</label>
-            <input type="text" name="date" value={date} onChange={(e) => setDate(e.target.value)} className="form-control mt-1"  />
+            <input type="text" name="date" placeholder='dd/mm/aa - dd/mm/aa' value={date} onChange={(e) => setDate(e.target.value)} className="form-control mt-1"  />
           </div>
 		  <br></br>
           <div className="d-grid gap-2 mt-3">
